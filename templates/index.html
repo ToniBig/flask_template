@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Welcome to Flask with Bootstrap & Alpine.js</h1>
+
+<!-- Example Bootstrap button with icon -->
+<button class="btn btn-primary">
+    <i class="bi bi-heart-fill"></i> Like
+</button>
+
+<!-- Example Alpine.js component -->
+<div x-data="{ open: false }" class="mt-3">
+    <button class="btn btn-secondary" @click="open = !open">Toggle Message</button>
+    <div x-show="open" x-transition class="mt-2 alert alert-info">
+        Alpine.js is working!
+    </div>
+</div>
+{% endblock %}
